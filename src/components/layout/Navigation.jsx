@@ -426,26 +426,16 @@ function Navigation({ onToggleSidebar, sidebarCollapsed }) {
                   style={{ 
                     width: '24px', 
                     height: '24px',
-                    objectFit: 'contain fluid'
+                    objectFit: 'contain'
                   }}
                 />
               </div>
-                <img 
-                  src={logo} 
-                  alt="Delicias Restaurant" 
-                  style={{ 
-                    width: '24px', 
-                    height: '24px',
-                    objectFit: 'contain fluid'
-                  }}
-                />
-          <div className="flex-grow-1">
-            <Nav className="flex-column">
-              {getNavigationRoutes(user, isAuthenticated, hasRole).map((item) => (
-                <NavigationLink key={item.path} item={item} mobile={true} />
-              ))}
-            </Nav>
-          </div>
+              <div>
+                <div className="fw-bold">Delicias Restaurant</div>
+                <small className="opacity-75">Cocina Peruana</small>
+              </div>
+            </div>
+          </Offcanvas.Title>
 
           <div className="border-top bg-light p-3">
             <div 
