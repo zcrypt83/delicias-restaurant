@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/delicias-restaurant/static/css/main.9f8e727a.css",
-    "main.js": "/delicias-restaurant/static/js/main.36fdbcfd.js",
+    "main.js": "/delicias-restaurant/static/js/main.be71fc97.js",
     "static/js/453.d6661577.chunk.js": "/delicias-restaurant/static/js/453.d6661577.chunk.js",
     "static/media/bootstrap-icons.woff?": "/delicias-restaurant/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
     "static/media/bootstrap-icons.woff2?": "/delicias-restaurant/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
     "static/media/logo.png": "/delicias-restaurant/static/media/logo.36447ec2c5b1e189ac3b.png",
     "index.html": "/delicias-restaurant/index.html",
     "main.9f8e727a.css.map": "/delicias-restaurant/static/css/main.9f8e727a.css.map",
-    "main.36fdbcfd.js.map": "/delicias-restaurant/static/js/main.36fdbcfd.js.map",
+    "main.be71fc97.js.map": "/delicias-restaurant/static/js/main.be71fc97.js.map",
     "453.d6661577.chunk.js.map": "/delicias-restaurant/static/js/453.d6661577.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f8e727a.css",
-    "static/js/main.36fdbcfd.js"
+    "static/js/main.be71fc97.js"
   ]
 }
