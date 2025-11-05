@@ -436,6 +436,16 @@ function Navigation({ onToggleSidebar, sidebarCollapsed }) {
               </div>
             </div>
           </Offcanvas.Title>
+        </Offcanvas.Header>
+
+        <Offcanvas.Body className="p-0 d-flex flex-column">
+          <div className="flex-grow-1">
+            <Nav className="flex-column">
+              {getNavigationRoutes(user, isAuthenticated, hasRole).map((item) => (
+                <NavigationLink key={item.path} item={item} mobile={true} />
+              ))}
+            </Nav>
+          </div>
 
           <div className="border-top bg-light p-3">
             <div 
