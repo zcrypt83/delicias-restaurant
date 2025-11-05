@@ -1,0 +1,214 @@
+/* src/styles/animations.css */
+.animated-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.animated-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+.hover-scale {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse-badge {
+  animation: pulse-badge 3s infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+.shake-on-hover:hover {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+  20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
+
+.pulse-on-hover:hover {
+  animation: pulse 0.5s infinite;
+}
+
+.slide-in-top {
+  animation: slideInTop 0.8s ease-out;
+}
+
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-bottom {
+  animation: slideInBottom 0.8s ease-out;
+}
+
+@keyframes slideInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.item-removing {
+  opacity: 0.5;
+  transform: translateX(-100px);
+  transition: all 0.3s ease-in-out;
+}
+
+.price-animation {
+  transition: all 0.3s ease-in-out;
+}
+
+.quantity-btn {
+  transition: all 0.2s ease-in-out;
+}
+
+.quantity-btn:active {
+  transform: scale(0.9);
+}
+
+.quantity-display {
+  transition: all 0.3s ease-in-out;
+  min-width: 40px;
+  text-align: center;
+}
+
+.remove-btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.remove-btn:hover {
+  background-color: #dc3545 !important;
+  color: white !important;
+}
+
+.promo-input:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.total-price {
+  transition: all 0.3s ease-in-out;
+}
+
+.animated-modal .modal-content {
+  animation: modal-appear 0.3s ease-out;
+}
+
+@keyframes modal-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.item-image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.item-image:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Efectos de gradiente animado */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Efecto flotante para partículas */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* Mejoras responsivas */
+@media (max-width: 768px) {
+  .hover-scale:hover {
+    transform: none;
+  }
+  
+  .animated-card:hover {
+    transform: none;
+  }
+  
+  .slide-in-top,
+  .slide-in-bottom {
+    animation: none;
+  }
+}
+
+/* Mejoras de accesibilidad */
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.form-control:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mejoras de rendimiento */
+.animated-card {
+  will-change: transform;
+}
+
+.hover-scale {
+  will-change: transform;
+}

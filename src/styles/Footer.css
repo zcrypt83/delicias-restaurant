@@ -1,0 +1,27 @@
+/* src/styles/footer.css */
+.hover-text-warning:hover {
+  color: #ffc107 !important;
+  transition: color 0.3s ease-in-out;
+}
+
+
+footer a:hover {
+  transform: translateX(5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto de aparición suave */
+footer {
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
