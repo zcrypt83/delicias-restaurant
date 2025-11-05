@@ -92,12 +92,3 @@ Antes de mergear, asegúrate de que `npm run build` compila sin errores.
 - Repositorio: https://github.com/zcrypt83/delicias-restaurant
 - Página publicada: https://zcrypt83.github.io/delicias-restaurant/
 
-Si quieres, puedo:
-
-- Limpiar las advertencias de ESLint y hacer un PR con las correcciones.
-- Mover los assets a `public/` si prefieres rutas absolutas en HTML.
-- Revisar el `gh-pages` publicado y confirmar las rutas de los assets en `index.html` del build.
-
----
-
-README actualizado en español — si deseas que lo adapte con más detalles técnicos (por ejemplo especificar versiones exactas de Node o listar dependencias principales) dímelo y lo incorporo.
