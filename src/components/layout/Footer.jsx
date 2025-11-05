@@ -2,6 +2,7 @@
 import React from 'react';
 import { Container, Row, Col, Button, Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import logo from '../../img/logo.png';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,12 +17,12 @@ function Footer() {
             <div className="d-flex align-items-center mb-3">
               <div className="bg-transparent">
                 <img 
-                src="/logo.png" 
-                alt="Delicias Restaurant" 
-                style={{ 
+                  src={logo} 
+                  alt="Delicias Restaurant" 
+                  style={{ 
                     width: '40px', 
                     height: '40px',
-                }}
+                  }}
                 />
               </div>
               <h5 className="text-warning mb-0 fw-bold">Delicias Restaurant</h5>
