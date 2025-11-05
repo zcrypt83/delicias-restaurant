@@ -15,6 +15,7 @@ import usePermissions from '../../hooks/UsePermissions';
 import { getNavigationRoutes } from '../../utils/NavigationRoutes';
 import PriceFormatter from '../common/PriceFormatter';
 import BadgeRole from '../common/BadgeRole';
+import logo from '../../img/logo.png';
 
 function Navigation({ onToggleSidebar, sidebarCollapsed }) {
   const location = useLocation();
@@ -258,7 +259,7 @@ function Navigation({ onToggleSidebar, sidebarCollapsed }) {
           <div className="d-flex align-items-center">
             <div className="bg-transparent rounded-circle d-flex align-items-center justify-content-center">
               <img 
-                src="/logo.png" 
+                src={logo} 
                 alt="Delicias Restaurant" 
                 style={{ 
                   width: '50px', 
@@ -355,7 +356,7 @@ function Navigation({ onToggleSidebar, sidebarCollapsed }) {
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center fw-bold">
           <div className="bg-transparent rounded-circle p-2 me-2 d-flex align-items-center justify-content-center">
             <img 
-              src="/logo.png" 
+              src={logo} 
               alt="Delicias Restaurant" 
               style={{ 
                 width: '20px', 
@@ -420,7 +421,7 @@ function Navigation({ onToggleSidebar, sidebarCollapsed }) {
             <div className="d-flex align-items-center">
               <div className="bg-transparent text-warning rounded-circle p-2 me-3 d-flex align-items-center justify-content-center">
                 <img 
-                  src="/logo.png" 
+                  src={logo} 
                   alt="Delicias Restaurant" 
                   style={{ 
                     width: '24px', 
@@ -429,15 +430,15 @@ function Navigation({ onToggleSidebar, sidebarCollapsed }) {
                   }}
                 />
               </div>
-              <div>
-                <div className="fw-bold">Delicias Restaurant</div>
-                <small className="opacity-75">Cocina Peruana</small>
-              </div>
-            </div>
-          </Offcanvas.Title>
-        </Offcanvas.Header>
-        
-        <Offcanvas.Body className="p-0 d-flex flex-column">
+                <img 
+                  src={logo} 
+                  alt="Delicias Restaurant" 
+                  style={{ 
+                    width: '24px', 
+                    height: '24px',
+                    objectFit: 'contain fluid'
+                  }}
+                />
           <div className="flex-grow-1">
             <Nav className="flex-column">
               {getNavigationRoutes(user, isAuthenticated, hasRole).map((item) => (
