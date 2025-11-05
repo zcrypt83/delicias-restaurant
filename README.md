@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+## Delicias Restaurant — Aplicación Frontend (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este repositorio contiene la interfaz web de "Delicias Restaurant", una aplicación construida con Create React App y React (React Router, React Bootstrap y utilidades propias).
 
-## Available Scripts
+El objetivo de este README es explicar cómo ejecutar, desarrollar y desplegar la app (incluyendo el despliegue en GitHub Pages), además de anotar problemas conocidos y soluciones rápidas.
 
-In the project directory, you can run:
+## Requisitos
 
-### `npm start`
+- Node.js (recomendado 16+). Comprueba con `node -v` y `npm -v`.
+- Git (para trabajar con el repositorio y desplegar con `gh-pages`).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Estructura principal
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `public/` — archivos estáticos (index.html, manifest, robots.txt).
+- `src/` — código fuente React:
+	- `components/` — componentes UI reutilizables (incluye `layout/` con `Navigation.jsx`, `Footer.jsx`).
+	- `pages/` — vistas/páginas (Home, MenuDigital, Cart, etc.).
+	- `context/` — React Contexts (Auth, Restaurant).
+	- `hooks/` — hooks personalizados.
+	- `img/` — imágenes empaquetadas por webpack (por ejemplo `logo.png`).
+	- `utils/`, `styles/`, `admin/`, `staff/` — módulos auxiliares según funcionalidades.
 
-### `npm test`
+## Comandos comunes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+En el directorio del proyecto:
 
-### `npm run build`
+```powershell
+npm install        # Instala dependencias
+npm start          # Ejecuta la app en modo desarrollo (http://localhost:3000)
+npm test           # Ejecuta tests (modo watch)
+npm run build      # Compila para producción en la carpeta `build`
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para desplegar en GitHub Pages (ya configurado en este repositorio):
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```powershell
+# (si aún no está instalado) npm install --save-dev gh-pages
+npm run deploy     # Ejecuta build y publica en la rama gh-pages
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> Nota: `npm run deploy` usa los scripts `predeploy`/`deploy` definidos en `package.json`.
 
-### `npm run eject`
+## Despliegue en GitHub Pages (pasos clave)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. En `package.json` debe existir la propiedad `homepage` apuntando a la URL del sitio: `https://<usuario>.github.io/<repo>/`.
+2. Instalar `gh-pages` como dependencia de desarrollo: `npm install --save-dev gh-pages`.
+3. Añadir scripts:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```json
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Debido a que GitHub Pages sirve archivos estáticos desde un subdirectorio, en esta app usamos `HashRouter` (react-router-dom) para evitar problemas con rutas y refreshs en producción.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Ejecutar `npm run deploy` subirá el contenido de `build/` a la rama `gh-pages` (o publicará con gh-pages) y tu sitio quedará disponible en la URL indicada en `homepage`.
 
-## Learn More
+## Notas específicas del proyecto (problemas comunes y soluciones aplicadas)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Pantalla blanca tras publicar: frecuentemente causada por el uso de `BrowserRouter` en GitHub Pages. Solución: cambiar a `HashRouter` (ya aplicado en `src/App.js`).
+- Logo en la UI no cargaba: el proyecto originalmente usaba rutas absolutas (`/logo.png`). Se cambió a importar la imagen desde `src/img/logo.png` y usar `src={logo}` en `Navigation.jsx` y `Footer.jsx`. Esto garantiza que el bundler (webpack) incluya el asset correctamente.
+- Alternativa de assets: si prefieres referenciar imágenes desde HTML estático o `public/`, coloca la imagen en `public/` y usa `process.env.PUBLIC_URL + '/logo.png'` o una ruta absoluta; en ese caso la imagen no será transformada por webpack.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Limpieza de warnings / ESLint
 
-### Code Splitting
+Durante la compilación aparecen advertencias de ESLint sobre imports/variables no usadas en varios archivos (por ejemplo `Alert` importado pero no usado). Son advertencias, no errores, pero es recomendable limpiarlas:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Elimina imports no usados.
+- Si un warning es intencional, puedes añadir `// eslint-disable-next-line` sobre la línea específica.
 
-### Analyzing the Bundle Size
+Limpiar estos warnings mejora la calidad del código y evita ruido en CI/builds.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Cómo contribuir / flujo de trabajo local
 
-### Making a Progressive Web App
+1. Crea una rama para tu feature: `git checkout -b feature/nombre`.
+2. Haz cambios, añade tests si corresponde.
+3. `git add .` `git commit -m "Describe tu cambio"`.
+4. `git push origin feature/nombre` y abre un Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Antes de mergear, asegúrate de que `npm run build` compila sin errores.
 
-### Advanced Configuration
+## Verificación y troubleshooting de despliegue
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Si la página muestra contenido incompleto o pantalla blanca:
+	- Abre la consola del navegador (F12) y verifica errores (404 para assets o errores JS).
+	- Asegúrate que `homepage` en `package.json` coincide con la URL pública.
+	- Si usas rutas, confirma que el Router es `HashRouter` o que el servidor soporta rewrites para `BrowserRouter`.
+	- Fuerza recarga (Ctrl+F5) o prueba en modo incógnito (caché viejo puede mostrar versiones anteriores).
 
-### Deployment
+## Información adicional y contacto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Repositorio: https://github.com/zcrypt83/delicias-restaurant
+- Página publicada: https://zcrypt83.github.io/delicias-restaurant/
 
-### `npm run build` fails to minify
+Si quieres, puedo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Limpiar las advertencias de ESLint y hacer un PR con las correcciones.
+- Mover los assets a `public/` si prefieres rutas absolutas en HTML.
+- Revisar el `gh-pages` publicado y confirmar las rutas de los assets en `index.html` del build.
+
+---
+
+README actualizado en español — si deseas que lo adapte con más detalles técnicos (por ejemplo especificar versiones exactas de Node o listar dependencias principales) dímelo y lo incorporo.
