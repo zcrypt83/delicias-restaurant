@@ -16,7 +16,7 @@ Este README documenta: cómo ejecutar el proyecto en desarrollo, cómo construir
 - Librerías auxiliares posibles: axios o fetch para peticiones HTTP, date-fns o moment para fechas, librerías de gestión del estado local cuando aplica.
 - gh-pages — (opcional, devDependency) para publicar la carpeta `build/` en GitHub Pages.
 
-Nota: las dependencias exactas se listan en `package.json`. Si quieres que agregue una tabla con versiones exactas la incluyo.
+Nota: las dependencias exactas se listan en `package.json`.1
 
 ## Cómo ayuda el sistema — valor y beneficios
 Este frontend está diseñado para facilitar la operación de un restaurante en línea y ofrece valor en varias áreas:
