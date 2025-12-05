@@ -1,0 +1,7 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#ffe6e6"/>
+  <circle cx="100" cy="100" r="50" fill="#ff6b6b" stroke="#c92a2a" stroke-width="2"/>
+  <path d="M 100 60 L 95 85 L 100 75 L 105 85 Z" fill="#ffff99"/>
+  <ellipse cx="80" cy="110" rx="15" ry="10" fill="#ffe0b2"/>
+  <text x="100" y="185" font-size="14" text-anchor="middle" fill="#333">Entrada</text>
+</svg>

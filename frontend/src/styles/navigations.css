@@ -1,0 +1,120 @@
+/* src/styles/navigations.css */
+.main-content-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Desktop: contenido se desplaza junto al sidebar */
+@media (min-width: 992px) {
+  .sidebar-expanded ~ .main-content-wrapper {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+  }
+  
+  .sidebar-collapsed ~ .main-content-wrapper {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+  }
+}
+
+/* Mobile: contenido con padding superior para el header */
+@media (max-width: 991.98px) {
+  .main-content-wrapper {
+    padding-top: 76px;
+  }
+}
+
+/* Estilos generales para mejorar la apariencia */
+.hover-scale {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.card-hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-hover:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Colores personalizados para paneles de staff */
+.bg-orange {
+  background-color: #fd7e14 !important;
+}
+
+.text-orange {
+  color: #fd7e14 !important;
+}
+
+.border-orange {
+  border-color: #fd7e14 !important;
+}
+
+.btn-orange {
+  background-color: #fd7e14;
+  border-color: #fd7e14;
+  color: white;
+}
+
+.btn-orange:hover {
+  background-color: #e56a00;
+  border-color: #e56a00;
+  color: white;
+}
+
+.btn-outline-orange {
+  color: #fd7e14;
+  border-color: #fd7e14;
+}
+
+.btn-outline-orange:hover {
+  background-color: #fd7e14;
+  border-color: #fd7e14;
+  color: white;
+}
+
+/* Badges personalizados */
+.badge-custom {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+/* Mejoras de scroll */
+.sidebar-content {
+  scrollbar-width: thin;
+  scrollbar-color: #dee2e6 transparent;
+}
+
+.sidebar-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+  background-color: #dee2e6;
+  border-radius: 4px;
+}
+
+/* Responsividad mejorada */
+@media (max-width: 576px) {
+  .container-fluid {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

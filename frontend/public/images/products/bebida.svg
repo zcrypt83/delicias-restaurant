@@ -1,0 +1,6 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#fff9e6"/>
+  <circle cx="100" cy="80" r="40" fill="#ffb347" stroke="#ff8c00" stroke-width="2"/>
+  <rect x="80" y="120" width="40" height="50" fill="#8b4513" rx="5"/>
+  <text x="100" y="185" font-size="14" text-anchor="middle" fill="#333">Bebida</text>
+</svg>

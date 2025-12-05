@@ -1,0 +1,66 @@
+/* src/styles/layout.css */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 1;
+  transition: all 0.3s ease-in-out;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Desktop - Sidebar Expandido (260px) */
+.main-content.with-sidebar-expanded {
+  margin-left: 260px;
+  width: calc(100vw - 260px);
+}
+
+/* Desktop - Sidebar Colapsado (80px) */
+.main-content.with-sidebar-collapsed {
+  margin-left: 80px;
+  width: calc(100vw - 80px);
+}
+
+/* Móvil - Sin sidebar lateral */
+.main-content.with-sidebar-mobile {
+  margin-left: 0;
+  width: 100vw;
+}
+
+/* Asegurar que el contenido interno sea responsivo */
+.main-content .container-fluid {
+  padding: 1rem;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .main-content .container-fluid {
+    padding: 1.5rem;
+  }
+}
+
+/* Para páginas específicas que necesiten más control */
+.page-container {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Utilidades para padding/margin responsivo */
+.content-padding {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .content-padding {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-padding {
+    padding: 2rem;
+  }
+}

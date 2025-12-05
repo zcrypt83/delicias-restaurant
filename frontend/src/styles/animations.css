@@ -1,0 +1,298 @@
+/* src/styles/animations.css - Modern animations for Delicias Restaurant */
+
+/* ===== FADE ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ===== CARD ANIMATIONS ===== */
+.animated-card {
+  transition: var(--transition-base);
+  will-change: transform, box-shadow;
+}
+
+.animated-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg) !important;
+}
+
+@keyframes cardEnter {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.hover-scale {
+  transition: transform var(--transition-fast);
+  will-change: transform;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes scaleDown {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(0.95); opacity: 0; }
+}
+
+@keyframes rotateIn {
+  from { opacity: 0; transform: rotate(-10deg) scale(0.8); }
+  to { opacity: 1; transform: rotate(0) scale(1); }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(255, 193, 7, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(255, 193, 7, 0.8); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
+  50% { box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); }
+}
+
+.pulse-badge {
+  animation: pulse-badge 3s infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-12px); }
+  60% { transform: translateY(-6px); }
+}
+
+@keyframes flip {
+  from { transform: perspective(400px) rotateY(0); }
+  to { transform: perspective(400px) rotateY(360deg); }
+}
+
+@keyframes swing {
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(5deg); }
+  80% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.shake-on-hover:hover {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+  20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
+
+.pulse-on-hover:hover {
+  animation: pulse 0.5s infinite;
+}
+
+.slide-in-top {
+  animation: slideInTop 0.8s ease-out;
+}
+
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-bottom {
+  animation: slideInBottom 0.8s ease-out;
+}
+
+@keyframes slideInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.item-removing {
+  opacity: 0.5;
+  transform: translateX(-100px);
+  transition: all 0.3s ease-in-out;
+}
+
+.price-animation {
+  transition: all 0.3s ease-in-out;
+}
+
+.quantity-btn {
+  transition: all 0.2s ease-in-out;
+}
+
+.quantity-btn:active {
+  transform: scale(0.9);
+}
+
+.quantity-display {
+  transition: all 0.3s ease-in-out;
+  min-width: 40px;
+  text-align: center;
+}
+
+.remove-btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.remove-btn:hover {
+  background-color: #dc3545 !important;
+  color: white !important;
+}
+
+.promo-input:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.total-price {
+  transition: all 0.3s ease-in-out;
+}
+
+.animated-modal .modal-content {
+  animation: modal-appear 0.3s ease-out;
+}
+
+@keyframes modal-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.item-image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.item-image:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Efectos de gradiente animado */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Efecto flotante para partículas */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* Mejoras responsivas */
+@media (max-width: 768px) {
+  .hover-scale:hover {
+    transform: none;
+  }
+  
+  .animated-card:hover {
+    transform: none;
+  }
+  
+  .slide-in-top,
+  .slide-in-bottom {
+    animation: none;
+  }
+}
+
+/* Mejoras de accesibilidad */
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: var(--input-focus-shadow);
+  outline: none;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mejoras de rendimiento */
+.animated-card {
+  will-change: transform;
+}
+
+.hover-scale {
+  will-change: transform;
+}
+
+/* ===== UTILITY ANIMATION CLASSES ===== */
+.fade-in { animation: fadeIn 0.5s ease-out; }
+.fade-in-up { animation: fadeInUp 0.6s ease-out; }
+.fade-in-down { animation: fadeInDown 0.6s ease-out; }
+.fade-in-left { animation: fadeInLeft 0.6s ease-out; }
+.fade-in-right { animation: fadeInRight 0.6s ease-out; }
+.scale-up { animation: scaleUp 0.4s ease-out; }
+.rotate-in { animation: rotateIn 0.5s ease-out; }
+.glow-animation { animation: glow 2s ease-in-out infinite; }
+.flip-animation { animation: flip 0.8s ease-in-out; }

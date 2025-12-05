@@ -1,0 +1,477 @@
+/* Card & Info Components - Modern Design */
+
+/* General Card */
+.card {
+  background: var(--bg-light);
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.card-header {
+  background: var(--gradient-primary);
+  border: none;
+  padding: var(--space-lg);
+  color: var(--text-dark);
+  font-weight: 600;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.card-body {
+  padding: var(--space-lg);
+  color: var(--text-dark);
+}
+
+.card-footer {
+  background: var(--bg-surface);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding: var(--space-lg);
+  display: flex;
+  gap: var(--space-md);
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  color: var(--text-dark);
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+  line-height: 1.6;
+}
+
+/* Card with Image */
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: var(--transition-base);
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Info Cards */
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--bg-light);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--primary);
+  transition: var(--transition-base);
+}
+
+.info-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.info-card.info-success {
+  border-left-color: var(--success);
+}
+
+.info-card.info-danger {
+  border-left-color: var(--danger);
+}
+
+.info-card.info-warning {
+  border-left-color: var(--primary);
+}
+
+.info-card.info-info {
+  border-left-color: var(--info);
+}
+
+.info-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 193, 7, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.info-card.info-success .info-icon {
+  background: rgba(76, 175, 80, 0.1);
+  color: var(--success);
+}
+
+.info-card.info-danger .info-icon {
+  background: rgba(255, 107, 107, 0.1);
+  color: var(--danger);
+}
+
+.info-card.info-info .info-icon {
+  background: rgba(33, 150, 243, 0.1);
+  color: var(--info);
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-content h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 var(--space-sm) 0;
+  color: var(--text-dark);
+}
+
+.info-content p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Stat Card */
+.stat-card {
+  background: var(--bg-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+}
+
+.stat-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-sm);
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-change {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-md);
+  display: inline-block;
+}
+
+.stat-change.positive {
+  background: rgba(76, 175, 80, 0.1);
+  color: var(--success);
+}
+
+.stat-change.negative {
+  background: rgba(255, 107, 107, 0.1);
+  color: var(--danger);
+}
+
+/* Feature Card */
+.feature-card {
+  background: linear-gradient(135deg, var(--bg-light) 0%, rgba(255, 193, 7, 0.05) 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+  border: 2px solid rgba(255, 193, 7, 0.1);
+  transition: var(--transition-base);
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 24px rgba(255, 193, 7, 0.2);
+  transform: translateY(-8px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-lg);
+  display: block;
+}
+
+.feature-card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  color: var(--text-dark);
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Timeline Card */
+.timeline-item {
+  padding-left: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--gradient-primary);
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--bg-light);
+  border: 3px solid var(--primary);
+}
+
+.timeline-content {
+  padding: var(--space-md);
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.timeline-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: var(--space-sm) 0;
+}
+
+.timeline-description {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Badge Styles */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-primary {
+  background: rgba(255, 193, 7, 0.2);
+  color: var(--primary);
+}
+
+.badge-success {
+  background: rgba(76, 175, 80, 0.2);
+  color: var(--success);
+}
+
+.badge-danger {
+  background: rgba(255, 107, 107, 0.2);
+  color: var(--danger);
+}
+
+.badge-warning {
+  background: rgba(255, 193, 7, 0.2);
+  color: var(--primary);
+}
+
+.badge-info {
+  background: rgba(33, 150, 243, 0.2);
+  color: var(--info);
+}
+
+.badge-muted {
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--text-muted);
+}
+
+/* Pill variant */
+.badge-pill {
+  border-radius: var(--radius-full);
+  padding: 6px 16px;
+}
+
+/* Alert Box */
+.alert {
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid;
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+  animation: slideInDown 0.4s ease-out;
+}
+
+.alert-primary {
+  background: rgba(255, 193, 7, 0.1);
+  border-left-color: var(--primary);
+  color: var(--text-dark);
+}
+
+.alert-success {
+  background: rgba(76, 175, 80, 0.1);
+  border-left-color: var(--success);
+  color: var(--text-dark);
+}
+
+.alert-danger {
+  background: rgba(255, 107, 107, 0.1);
+  border-left-color: var(--danger);
+  color: var(--text-dark);
+}
+
+.alert-warning {
+  background: rgba(255, 193, 7, 0.1);
+  border-left-color: var(--primary);
+  color: var(--text-dark);
+}
+
+.alert-info {
+  background: rgba(33, 150, 243, 0.1);
+  border-left-color: var(--info);
+  color: var(--text-dark);
+}
+
+.alert-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.alert-content h5 {
+  font-weight: 700;
+  margin: 0 0 var(--space-xs) 0;
+}
+
+.alert-content p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.alert-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: var(--transition-fast);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.alert-close:hover {
+  opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: var(--space-lg);
+  }
+
+  .info-card {
+    gap: var(--space-md);
+  }
+
+  .feature-card {
+    padding: var(--space-lg);
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+  }
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: var(--bg-dark);
+  }
+
+  .card-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .card-footer {
+    background: rgba(255, 255, 255, 0.05);
+    border-top-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .card-text,
+  .stat-label,
+  .info-content p {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .info-card {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .feature-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 193, 7, 0.03) 100%);
+    border-color: rgba(255, 193, 7, 0.15);
+  }
+
+  .timeline-content {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .timeline-description {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}

@@ -1,0 +1,222 @@
+INFORME EXAMEN PARCIAL 
+
+Integrantes. 
+
+ 
+
+Ponce Pampa, Juan Diego  
+
+Soncco, Ivan Zarate 
+
+Yana Quispe, Marco Antonio 
+
+ 
+
+ 
+
+Descripción del proyecto
+
+El sistema "Delicias Restaurant" es una aplicación web desarrollada en React que proporciona una solución integral para la gestión de restaurantes. El sistema está diseñado para mejorar la eficiencia operativa, el control administrativo y la experiencia del cliente.
+
+FUNCIONALIDADES PRINCIPALES
+
+1. Administración del restaurante (Reportes y Gestión)
+
+a) Panel de Control Administrativo:
+- Dashboard con métricas en tiempo real
+- Gestión completa del menú y precios
+- Control de inventario y alertas
+- Reportes de ventas y tendencias
+- Gestión de personal y permisos
+
+b) Reportes Principales:
+1. Ventas y Rendimiento
+   - Ventas diarias/semanales/mensuales
+   - Productos más vendidos
+   - Análisis de horas pico
+   - Rentabilidad por producto
+
+2. Gestión de Inventario
+   - Stock actual y proyecciones
+   - Alertas de productos bajos
+   - Histórico de movimientos
+   - Pérdidas y mermas
+
+3. Eficiencia Operativa
+   - Tiempos de preparación
+   - Ocupación de mesas
+   - Desempeño del personal
+   - Satisfacción del cliente
+
+4. Reservas y Ocupación
+   - Estado actual de mesas
+   - Histórico de reservas
+   - Predicción de ocupación
+   - Gestión de eventos
+
+2. Personal (Staff)
+
+a) Panel de Cocina:
+- Lista de pedidos pendientes
+- Sistema de priorización
+- Tiempos de preparación
+- Comunicación con meseros
+
+b) Panel de Meseros:
+- Gestión de mesas asignadas
+- Toma de pedidos digital
+- Estado de órdenes
+- Sistema de notificaciones
+
+c) Panel de Caja:
+- Procesamiento de pagos
+- Cierre de órdenes
+- Emisión de comprobantes
+- Control de caja
+
+3. Clientes
+
+a) Interfaz de Usuario:
+- Menú digital interactivo
+- Sistema de reservas online
+- Seguimiento de pedidos
+- Historial de compras
+
+b) Funcionalidades:
+- Registro y perfil de usuario
+- Carrito de compras persistente
+- Sistema de favoritos
+- Calificación y feedback
+
+Diseño de wireframes 
+
+ 
+
+ 
+
+https://www.figma.com/design/b85FXT9PhsvP3d4GzHcObj/bocetos-delicias-restaurant?t=zrpsq8uKP6crX0aU-1 
+
+ 
+
+ 
+
+ 
+
+https://www.figma.com/design/U97k709w015hoLcQptR2jc/Untitled?node-id=115-1300&m=dev&t=pGFNm8VKOvIGE21G-1 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Prototipos interactivos en figma 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+https://www.figma.com/design/U97k709w015hoLcQptR2jc/Untitled?node-id=115-1300&m=dev&t=pGFNm8VKOvIGE21G-1 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Presentación de la aplicación con React. 
+
+ 
+
+Usabilidad y experiencia del usuario. 
+
+ 
+
+Interacciones avanzadas
+
+1. Sistema de notificaciones en tiempo real
+2. Actualización automática de estados de pedidos
+3. Gestión dinámica del carrito de compras
+4. Sistema de reservas interactivo
+5. Dashboards con gráficos dinámicos
+
+Soluciones implementadas
+
+1. Gestión de Pedidos en Tiempo Real
+- Panel de control unificado para todos los pedidos
+- Sistema de priorización automática
+- Notificaciones instantáneas entre áreas
+- Seguimiento detallado de estados
+- Estadísticas de tiempos de preparación
+
+2. Control de Inventario y Menú Digital
+- Actualización instantánea del menú
+- Alertas automáticas de productos agotados
+- Gestión de promociones y ofertas
+- Categorización flexible del menú
+- Registro histórico de cambios
+
+3. Sistema de Reservas Inteligente
+- Calendario de reservaciones
+- Asignación automática de mesas
+- Sistema de espera virtual
+- Control de ocupación en tiempo real
+- Histórico de reservas por cliente
+
+4. Dashboard Analítico
+- Métricas clave del negocio
+- Reportes exportables (PDF/Excel)
+- Gráficos interactivos de tendencias
+- Análisis de ventas y rendimiento
+- Indicadores de satisfacción
+
+5. Gestión de Roles y Permisos
+- Perfiles predefinidos por rol
+- Permisos personalizables
+- Vistas específicas por usuario
+- Sistema de auditoría
+- Control de acceso granular
+
+ 
+
+Configuración de un entorno de desarrollo con React(Enlace al repositorio.) 
+
+ 
+
+Repositorio: https://github.com/zcrypt83/delicias-restaurant 
+
+Página publicada: https://zcrypt83.github.io/delicias-restaurant/ 
+
+ 
+
+ 
+
+Pantallazos del proyecto construido en React. 
+
+ 
+
+Explicación del código en exposición. 
